@@ -6,6 +6,7 @@
     <input type="button" onclick="signOut();" value="Sign Out">
 <script>
   function signOut() {
+    alert("logout");
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut();
     location.reload();
