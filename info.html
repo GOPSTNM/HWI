@@ -3,14 +3,14 @@
     <script src="https://accounts.google.com/gsi/client" async></script>
     Homework Information Service </br>
     Test - You have logged in </br>
-    <input type="button" onclick="signOut();" value="Sign Out">
-<script>
-  function signOut() {
-    alert("logout");
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut();
-    location.reload();
-  }
-</script>
+    <a href="https://gopstnm.github.io/HWI/" onclick="signOut();">Sign out</a>
+    <script>
+      function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+          console.log('User signed out.');
+        });
+      }
+    </script>
   </body>
 </html>
