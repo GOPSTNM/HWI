@@ -23,8 +23,14 @@
 </div>
     <script>
       function login() {
-        location.replace("https://gopstnm.github.io/HWI/info.html");
         alert("hi");
+        fetch('https://gopstnm.github.io/HWI/info.html')
+          .then( response => response.text() )
+          .then( result => {
+            let parser = new DOMParser();
+            doc = parser.parseFromString( result, 'text/html' );
+            document.replaceChild( doc.documentElement, document.documentElement );
+          } );
       }
     </script>
   </body>
