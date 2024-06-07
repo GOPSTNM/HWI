@@ -3,7 +3,15 @@
     <script src="https://accounts.google.com/gsi/client" async></script>
     Homework Information Service </br>
     Test
-   
+   <script>
+  window.onload = function () {
+    google.accounts.id.initialize({
+      client_id: '29045455352-bl0k3pkltfp3qc7gbh9j4cua8n40v1mb.apps.googleusercontent.com',
+      callback: handleCredentialResponse
+    });
+    google.accounts.id.prompt();
+  };
+</script>
     <script>
       function login () {
         alert("Logged in but no info can be shown");
